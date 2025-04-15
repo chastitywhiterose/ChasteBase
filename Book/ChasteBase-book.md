@@ -12,6 +12,8 @@ ChasteBase is a new idea for a Chess Database invented by Chastity White Rose. I
 
 ChasteBase is not a replacement for ChessBase, but it is a helpful resource that Chastity uses to remind herself of what she learned and also to teach students. There are very few pictures in this book page because it would take forever designing pictures for infinite Chess positions. It would also make the printing cost of the paperback higher. Instead, I recommend using the [Lichess Analysis Board](https://lichess.org/analysis) to follow along with the Chess notation. For example, if you copy paste ["1.d4 d5 2.c4 dxc4 3.Nf3 Nf6 4.e4 Nxe4 5.Bxc4 Bg4 6.Ne5 Bxd1 7.Bxf7#"](https://lichess.org/C7xSjA8g) into the PGN field of that page and click import, you will then be able to step through each move of a 13 move checkmate. Chess notation is well defined and supported by more Chess software than you can possibly imagine!
 
+Therefore, ChasteBase is this book, but it is also a philosophy and method I will teach you so that you can make your own Chess Database and name it after yourself if you feel like it. I will teach you not only how to download your own lichess database, using my own as an example case, but I will also tell you how to make the most of it.
+
 Also, anyone serious about Chess will probably want to play Chess online on lichess.org anyway. You can play with [chastitywhiterose](https://lichess.org/@/chastitywhiterose) almost anytime by sending a challenge!
 
 # Obtaining a Chess Database
@@ -53,10 +55,61 @@ The best currently available free and open source Chess database management prog
 
 # The Quality of Games
 
+As mentioned before, games ending in Checkmate are more reliable than games ending by other means. However, there is something else to consider. Who are you playing against and how good of a player are they? This can be difficult to determine or control. Therefore, contrary to my previous advice in my last book of playing against humans, I recommend playing against Stockfish level 4 on lichess. I have good reasons for this.
+
+- Stockfish levels less than 4 are too easy.
+- Higher levels, especially 8 are near impossible.
+- The computer will never resign.
+- You can take back mistakes.
+
+Therefore, I will make use of these commands to show how you can extract games with a certain opponent. Which in this case, is the "lichess AI level 4".
 
 Commands for extracting wins against the lichess AI which is technically Fairy Stockfish.
-In this example, I am extracting wins against the level 4 AI.
 
 `pgn-extract -Twchastitywhiterose -Tb"lichess AI level 4" -Tr1-0 lichess_chastitywhiterose.pgn -ochastitywhiterose_white_wins_lichess.pgn --checkmate`
 
 `pgn-extract -Tw"lichess AI level 4" -Tbchastitywhiterose -Tr0-1 lichess_chastitywhiterose.pgn -ochastitywhiterose_black_wins_lichess.pgn --checkmate`
+
+# White vs Stockfish
+
+I recommend starting with d4 whenever you are playing as white.
+
+![d4.png](https://chastitychesschallenge.com/wp-content/uploads/2025/03/d4.png)
+
+You don't know what white will do, but I will cover some rules I think you might want to follow that will get you through the opening.
+
+# Black vs Stockfish
+
+When you are playing as black, it is very common for the computer to start with either d4 or d5 as the first move. Therefore, this book will cover cases where black starts with either of these moves.
+
+## French Defense vs Stockfish
+
+If white plays e4, you could go with many different openings, however, the French Defense is the one I choose to teach in this book.
+
+This is the start of the French Defense. White has moved king's pawn to e4 and we are moving our king's pawn only one square instead of the usual two.
+
+![e4-e6.png](https://chastitychesschallenge.com/wp-content/uploads/2025/03/e4-e6.png)
+
+I know it looks weird and uncomfortable to move a pawn only one square when it could have moved two, but the reason for this will become clear very soon.
+
+Almost all the time, white will move their queen's pawn two squares and in this case you will copy them.
+
+![e4-e6-d4-d5.png](https://chastitychesschallenge.com/wp-content/uploads/2025/03/e4-e6-d4-d5.png)
+
+In this position, white has the option of capturing the d5 black pawn. If they take it, it is called the exchange variation of the French Defense. White will capture the pawn but then we capture it right back. Then the board will look like this.
+
+![e4-e6-d4-d5-exd5-exd5.png](https://chastitychesschallenge.com/wp-content/uploads/2025/03/e4-e6-d4-d5-exd5-exd5.png)
+
+As the black player, this is precisely what you wanted to happen because now the path is open for you to move either of your bishops or your queen out if you need to.
+
+The other alternative is when white does not take the pawn and instead advances it to e5.
+
+![e4-e6-d4-d5-e5.png](https://chastitychesschallenge.com/wp-content/uploads/2025/03/e4-e6-d4-d5-e5.png)
+
+This is called the advanced variation of the French Defense, not because it is advanced in the sense of complicated but because the white pawn has advanced instead of capturing. When this happens, the best thing to do is to move a pawn to c5 and offer the "black queen's gambit" and hope that white takes it so you can capture back with the bishop. From that point the game continues like normal and it follows much of the same logic as I use when I play the Queen's Gambit.
+
+If the next move by white is moving a knight to d2, they have blocked the bishop from attacking the dark squares. This means that the black knight can safely move to h6 with the idea of going to f5 and attacking white's d4 pawn. At this point, they will try to defend that pawn with a knight or a pawn. You then want to move a pawn to c5 and also threaten it.
+
+## 1. e4 e6 2. d4 d5 3. Nd2 Nh6 4. Ngf3 c5
+
+ If they take the pawn with their pawn, capture it back with the bishop.
