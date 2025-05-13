@@ -1,0 +1,10 @@
+Limit games by ply
+
+The documentation for pgn-extract shows that you can limit the length of games matched in database.
+
+https://www.cs.kent.ac.uk/people/staff/djb/pgn-extract/help.html#move-bounds
+
+pgn-extract lichess_chastitywhiterose.pgn --maxply 20 -owhite_maxply20.pgn --checkmate
+
+
+
