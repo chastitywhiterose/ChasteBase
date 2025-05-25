@@ -4,7 +4,10 @@ This website is created with Github Pages. It is my largest project yet but the 
 
 However, some positions will show up more often than others!
 
-Although this site is dedicated to standard Chess. Other games like Shogi and Xiangqi may be added eventually.
+Although this site is dedicated to [standard Chess](https://chastitywhiterose.github.io/ChasteBase/Chess/). Other games like Shogi and Xiangqi may be added eventually.
 
-https://chastitywhiterose.github.io/ChasteBase/
+This page is located at:
 
+<https://chastitywhiterose.github.io/ChasteBase/>
+
+There is not much here at the moment. See my [Chess book](https://chastitychesschallenge.com/chastitys-chess-chapters/) for more Chess info.
