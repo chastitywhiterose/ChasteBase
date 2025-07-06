@@ -1,0 +1,1 @@
+As it turns out, Markdown alone is not enough to properly format the tables I want according to my vision I have. I am learning some HTML and CSS for this purpose. The markdown conversion to HTML by pandoc was used as a starting guide.
