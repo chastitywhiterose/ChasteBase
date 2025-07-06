@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfectly Spaced Table</title>
+  <style>
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #000000;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Doe</td>
+        <td>28</td>
+        <td>New York</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>34</td>
+        <td>Los Angeles</td>
+      </tr>
+      <tr>
+        <td>Sam Wilson</td>
+        <td>23</td>
+        <td>Chicago</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
