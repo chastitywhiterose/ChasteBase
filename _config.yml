@@ -1,3 +1,5 @@
-# This is a configuration file for the Github Pages edition of ChasteBase.
-# This site managed by Chastity White Rose
-theme: jekyll-theme-minimal
+# This is a configuration file for the Github Pages edition of a book by Chastity.
+# This site is managed by Chastity White Rose, the Vegan Virgin.
+
+title: ChasteBase
+description: Chastity's Personal Chess Database
