@@ -1,2 +1,12 @@
 https://www.w3schools.com/html/html_table_borders.asp
 
+
+
+This may be helpful for using CSS in wordpress.
+
+https://wordpress.com/support/editing-css/
+
+My own GitHub chess database is here.
+
+https://chastitywhiterose.github.io/ChasteBase/Chess-Table/
+
