@@ -1,5 +1,5 @@
 html:
 	pandoc ChasteBase-Table.md -o body.html
-	cat table-head.html temp.html > base.html
+	cat ChasteBase-Table-Head.html body.html > ChasteBase.html
 html-s:
 	pandoc ChasteBase-Table.md -o body.html -s

@@ -10,3 +10,8 @@ My own GitHub chess database is here.
 
 https://chastitywhiterose.github.io/ChasteBase/Chess-Table/
 
+
+
+
+https://linuxconfig.org/how-to-pipe-output-to-a-file-on-linux
+

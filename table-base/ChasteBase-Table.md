@@ -1,8 +1,7 @@
 # Chess Start Position
 
-
-||a|b|c|d|e|f|g|h|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|   | a | b | c | d | e | f | g | h |
+|---|---|---|---|---|---|---|---|---|
 | 8 | r | n | b | q | k | b | n | r |
 | 7 | p | p | p | p | p | p | p | p |
 | 6 |   |   |   |   |   |   |   |   |
@@ -28,8 +27,8 @@ Later on, I may cover openings starting with e4, but because they are too popula
 
 # 1. d4
 
-||a|b|c|d|e|f|g|h|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|   | a | b | c | d | e | f | g | h |
+|---|---|---|---|---|---|---|---|---|
 | 8 | r | n | b | q | k | b | n | r |
 | 7 | p | p | p | p | p | p | p | p |
 | 6 |   |   |   |   |   |   |   |   |
@@ -43,8 +42,8 @@ d4 is my favorite starting move for white because I am trying to launch into the
 
 # 1. d4 d5
 
-||a|b|c|d|e|f|g|h|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|   | a | b | c | d | e | f | g | h |
+|---|---|---|---|---|---|---|---|---|
 | 8 | r | n | b | q | k | b | n | r |
 | 7 | p | p | p |   | p | p | p | p |
 | 6 |   |   |   |   |   |   |   |   |
@@ -61,8 +60,8 @@ When this happens, my next move is always c4 which makes the queen's gambit.
 
 # 1. d4 d5 2. c4
 
-||a|b|c|d|e|f|g|h|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|   | a | b | c | d | e | f | g | h |
+|---|---|---|---|---|---|---|---|---|
 | 8 | r | n | b | q | k | b | n | r |
 | 7 | p | p | p |   | p | p | p | p |
 | 6 |   |   |   |   |   |   |   |   |
@@ -72,6 +71,24 @@ When this happens, my next move is always c4 which makes the queen's gambit.
 | 2 | P | P |   |   | P | P | P | P |
 | 1 | R | N | B | Q | K | B | N | R |
 
-When this position occurs, the next move by black has all the power to decide the rest of the game. Black can take the pawn on c4 but this allows white to move the king's pawn to e4 and take full control of the center with both central pawns. Even e3 would not be a bad move in this case.
+
+This position is called the Queen's Gambit. When this position occurs, the next move by black has all the power to decide the rest of the game. Black can take the pawn on c4 but this allows white to move the king's pawn to e4 and take full control of the center with both central pawns. Even e3 would not be a bad move in this case.
 
 White can quickly find a way to take back the black pawn if this happens with the bishop or even the queen.
+
+# 1. d4 d5 2. c4 e6
+
+|   | a | b | c | d | e | f | g | h |
+|---|---|---|---|---|---|---|---|---|
+| 8 | r | n | b | q | k | b | n | r |
+| 7 | p | p | p |   |   | p | p | p |
+| 6 |   |   |   |   | p |   |   |   |
+| 5 |   |   |   | p |   |   |   |   |
+| 4 |   |   | P | P |   |   |   |   |
+| 3 |   |   |   |   |   |   |   |   |
+| 2 | P | P |   |   | P | P | P | P |
+| 1 | R | N | B | Q | K | B | N | R |
+
+This is the Queen's Gambit Declined. Black has moved their king's pawn 1 square to defend the d5 pawn in case white's c4 pawn captures it. However, this does come with the downside of blocking black's c file bishop.
+
+What I recommend here is white knight to f3. The idea is to get it to the e5 square and trap that e6 pawn there permanently.
