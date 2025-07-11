@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ChasteBase-Table</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<html>
+<h1 id="chess-start-position">Chess Start Position</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">c</th>
+<th style="text-align: center;">d</th>
+<th style="text-align: center;">e</th>
+<th style="text-align: center;">f</th>
+<th style="text-align: center;">g</th>
+<th style="text-align: center;">h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">r</td>
+<td style="text-align: center;">n</td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">q</td>
+<td style="text-align: center;">k</td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">n</td>
+<td style="text-align: center;">r</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">Q</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">R</td>
+</tr>
+</tbody>
+</table>
+<p>What you see above is an HTML table representation of a Chess board.
+It is not perfect, but it is a convenient way to avoid the use of images
+when creating documentation on different Chess positions. Using plain
+text saves a lot of space compared to the space required to make
+millions of Chess images for every possible move. The white pieces are
+represented with capital letters and the black by lowercase letters.</p>
+<p>Of course, I don’t intend to document every move that could occur in
+every Chess game. Instead, I want to cover those that happen in real
+games with humans. The idea is approximately one blog post per day where
+I analyze the board from my human perspective and then write what I
+think the best move is.</p>
+<p>Unlike a Chess engine, I can explain the reason for my moves in a
+position. This could be used for future Chess books after I have written
+good explanations of why I recommend a move in a given position.</p>
+<p>In any case, my recommended move from the starting position will
+always be d4, which means move the pawn in front of the white queen to
+d4.</p>
+<p>Later on, I may cover openings starting with e4, but because they are
+too popular and overused, I will be sticking with my openings beginning
+with d4. The idea is one post per day because this is a small step that
+is easy to fit into my busy schedule.</p>
+<hr />
+<h1 id="d4">1. d4</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">c</th>
+<th style="text-align: center;">d</th>
+<th style="text-align: center;">e</th>
+<th style="text-align: center;">f</th>
+<th style="text-align: center;">g</th>
+<th style="text-align: center;">h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">r</td>
+<td style="text-align: center;">n</td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">q</td>
+<td style="text-align: center;">k</td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">n</td>
+<td style="text-align: center;">r</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">Q</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">R</td>
+</tr>
+</tbody>
+</table>
+<p>d4 is my favorite starting move for white because I am trying to
+launch into the Queen’s Gambit or London System depending on what black
+does. The most common responses by black are d5 or Nf6. In either case,
+c4 is still a valid next move for white.</p>
+<h1 id="d4-d5">1. d4 d5</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">c</th>
+<th style="text-align: center;">d</th>
+<th style="text-align: center;">e</th>
+<th style="text-align: center;">f</th>
+<th style="text-align: center;">g</th>
+<th style="text-align: center;">h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">r</td>
+<td style="text-align: center;">n</td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">q</td>
+<td style="text-align: center;">k</td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">n</td>
+<td style="text-align: center;">r</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">Q</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">R</td>
+</tr>
+</tbody>
+</table>
+<p>It makes sense for black to move their queen’s pawn to d5 because the
+most common move would be king’s pawn to e5 and that would allow white
+to capture the pawn with no consequence.</p>
+<p>When this happens, my next move is always c4 which makes the queen’s
+gambit.</p>
+<h1 id="d4-d5-2.-c4">1. d4 d5 2. c4</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">c</th>
+<th style="text-align: center;">d</th>
+<th style="text-align: center;">e</th>
+<th style="text-align: center;">f</th>
+<th style="text-align: center;">g</th>
+<th style="text-align: center;">h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">r</td>
+<td style="text-align: center;">n</td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">q</td>
+<td style="text-align: center;">k</td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">n</td>
+<td style="text-align: center;">r</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;">p</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">p</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;">P</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">Q</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">R</td>
+</tr>
+</tbody>
+</table>
+<p>When this position occurs, the next move by black has all the power
+to decide the rest of the game. Black can take the pawn on c4 but this
+allows white to move the king’s pawn to e4 and take full control of the
+center with both central pawns. Even e3 would not be a bad move in this
+case.</p>
+<p>White can quickly find a way to take back the black pawn if this
+happens with the bishop or even the queen.</p>
+</body>
+</html>
