@@ -92,3 +92,34 @@ White can quickly find a way to take back the black pawn if this happens with th
 This is the Queen's Gambit Declined. Black has moved their king's pawn 1 square to defend the d5 pawn in case white's c4 pawn captures it. However, this does come with the downside of blocking black's c file bishop.
 
 What I recommend here is white knight to f3. The idea is to get it to the e5 square and trap that e6 pawn there permanently.
+
+
+# 1. d4 d5 2. c4 e6 3. Nf3
+
+|   | a | b | c | d | e | f | g | h |
+|---|---|---|---|---|---|---|---|---|
+| 8 | r | n | b | q | k | b | n | r |
+| 7 | p | p | p |   |   | p | p | p |
+| 6 |   |   |   |   | p |   |   |   |
+| 5 |   |   |   | p |   |   |   |   |
+| 4 |   |   | P | P |   |   |   |   |
+| 3 |   |   |   |   |   | N |   |   |
+| 2 | P | P |   |   | P | P | P | P |
+| 1 | R | N | B | Q | K | B |   | R |
+
+In this position, the knight on f3 is perfectly safe. The idea is to get it to the e5 square next turn and keep black's pawn on e6 there as long as possible. This prevents black's knight from moving past it.
+
+# 1. d4 d5 2. c4 e6 3. Bd2
+
+|   | a | b | c | d | e | f | g | h |
+|---|---|---|---|---|---|---|---|---|
+| 8 | r | n | b | q | k | b | n | r |
+| 7 | p | p | p |   |   | p | p | p |
+| 6 |   |   |   |   | p |   |   |   |
+| 5 |   |   |   | p |   |   |   |   |
+| 4 |   |   | P | P |   |   |   |   |
+| 3 |   |   |   |   |   |   |   |   |
+| 2 | P | P |   | B | P | P | P | P |
+| 1 | R | N |   | Q | K | B | N | R |
+
+By moving moving the queen side bishop to d2, white is denying black the chance to put the white king in check. If the b1 knight moves to c3, it will not be pinned because the king cannot be put in check as long as the bishop remains on d2.
